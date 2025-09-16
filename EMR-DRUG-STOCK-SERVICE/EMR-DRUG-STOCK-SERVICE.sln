@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMR-DRUG-STOCK-SERVICE", "EMR-DRUG-STOCK-SERVICE\EMR-DRUG-STOCK-SERVICE.csproj", "{766A0750-1AEC-4911-B473-3D8A283330EF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MUNICH_DRUG_SYNC", "MUNICH_DRUG_SYNC\MUNICH_DRUG_SYNC.vdproj", "{B3F692EC-6ECD-45E9-A2C7-DF0DE9D968F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{766A0750-1AEC-4911-B473-3D8A283330EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766A0750-1AEC-4911-B473-3D8A283330EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766A0750-1AEC-4911-B473-3D8A283330EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766A0750-1AEC-4911-B473-3D8A283330EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F692EC-6ECD-45E9-A2C7-DF0DE9D968F0}.Debug|Any CPU.ActiveCfg = Debug
+		{B3F692EC-6ECD-45E9-A2C7-DF0DE9D968F0}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48C1030B-05F1-4BD3-85D4-ADEE3A43B650}
+	EndGlobalSection
+EndGlobal
