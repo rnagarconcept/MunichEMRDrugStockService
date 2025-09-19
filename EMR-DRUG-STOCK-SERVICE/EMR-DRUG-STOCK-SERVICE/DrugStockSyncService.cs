@@ -33,8 +33,9 @@ namespace EMR_DRUG_STOCK_SERVICE
                 // Clear Existing Records           
                 var items = await SqlDataAccessRepository.GetInstance.GetPharmacyStockInfo();
                 var uniqueItems = items.GroupBy(x => x.DRUG_CODE).Select(g => g.First()).ToList();
-                // Insert Bulk
-                OracleDataAccessRepository.GetInstance.BulkInsertDrugStock(uniqueItems);
+                log.Info($"Total Unique Items To Be Sync {uniqueItems.Count}");
+                // Insert Bulk                
+                OracleDataAccessRepository.GetInstance.BulkInsertDrugStock_Updated(uniqueItems);
             }
             catch (Exception ex)
             {

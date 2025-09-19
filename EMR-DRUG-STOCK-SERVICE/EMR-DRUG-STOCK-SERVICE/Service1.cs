@@ -57,8 +57,10 @@ namespace EMR_DRUG_STOCK_SERVICE
         {
             try
             {
-               var task = DrugStockSyncService.GetInstance.Sync();
-               Task.WaitAll(task);
+                Task.Run(async () =>
+                {
+                    await DrugStockSyncService.GetInstance.Sync();
+                }).GetAwaiter().GetResult();               
             }
             catch (Exception ex)
             {

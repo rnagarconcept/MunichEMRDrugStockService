@@ -274,12 +274,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_451B83917EFB1D848802C1E58976009C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E9F04344D2964BAE9BE727AF0EA8542F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -361,6 +355,12 @@
         "OwnerKey" = "8:_69E0967EEA493407F60B65555F90DBA0"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_451B83917EFB1D848802C1E58976009C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -369,7 +369,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:..\\..\\Installer\\MUNICH_DRUG_SYNC_V1.msi"
+        "OutputFilename" = "8:..\\..\\Installer\\CONCEPT_PHARMACY_DRUG_SYNC_V1.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -379,6 +379,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -395,6 +411,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -969,9 +993,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Concept Munich Drug Stock Sync"
+        "ProductName" = "8:Concept Pharmacy Drug Stock Sync"
         "ProductCode" = "8:{DFF18D64-2450-4430-985D-A0DB9B02DF24}"
-        "PackageCode" = "8:{4079B4B7-1B57-4763-B0DD-3FDB74F3842A}"
+        "PackageCode" = "8:{D89B49F4-7F2D-431C-A23E-4ED8ECB8CC7B}"
         "UpgradeCode" = "8:{2BD5E4DB-C3BD-4010-9589-6A146D8ED09F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -982,11 +1006,11 @@
         "Manufacturer" = "8:Concept Soft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Concept Munich Drug Stock Sync"
+        "Title" = "8:Concept Pharmacy Drug Stock Sync"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Concept Soft"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:Concept Soft Munich Drug Stock Sync Service"
+        "ARPCOMMENTS" = "8:Concept Soft Pharmacy Drug Stock Sync Service"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"

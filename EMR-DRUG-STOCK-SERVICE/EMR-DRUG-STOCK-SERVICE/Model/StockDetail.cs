@@ -11,5 +11,6 @@ namespace EMR_DRUG_STOCK_SERVICE.Model
         public string DRUG_NAME { get; set; }
         public string DRUG_CODE { get; set; }
         public decimal DRUG_QTY { get; set; }
+        public DateTime UpdatedOn { get; set; }
     }
 }

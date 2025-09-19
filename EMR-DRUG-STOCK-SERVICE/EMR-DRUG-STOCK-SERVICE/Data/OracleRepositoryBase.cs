@@ -7,7 +7,7 @@ namespace EMR_DRUG_STOCK_SERVICE.Data
 {
     public class OracleRepositoryBase : RepositoryBase
     {
-        public string ConnectionString { get; set; } = ConfigurationManager.AppSettings["DestinationConnectionString"].ToString();
+        public string ConnectionString { get; set; } = ConfigurationManager.ConnectionStrings["DestinationConnectionString"].ConnectionString;
        
         private static OracleConnection con;
         public OracleConnection OpenConnection()

@@ -29,34 +29,34 @@ namespace EMR_DRUG_STOCK_SERVICE
         /// </summary>
         private void InitializeComponent()
         {
-            this.MunichDrugSyncProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.MunichDrugSyncServiceInstaller = new System.ServiceProcess.ServiceInstaller();
+            this.PharmacyDrugSyncProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
+            this.PharmacyDrugSyncServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // MunichDrugSyncProcessInstaller1
+            // PharmacyDrugSyncProcessInstaller1
             // 
-            this.MunichDrugSyncProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
-            this.MunichDrugSyncProcessInstaller1.Password = null;
-            this.MunichDrugSyncProcessInstaller1.Username = null;
+            this.PharmacyDrugSyncProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
+            this.PharmacyDrugSyncProcessInstaller1.Password = null;
+            this.PharmacyDrugSyncProcessInstaller1.Username = null;
             // 
-            // MunichDrugSyncServiceInstaller
+            // PharmacyDrugSyncServiceInstaller
             // 
-            this.MunichDrugSyncServiceInstaller.Description = "Concept Munich Drug Stock Sync Service";
-            this.MunichDrugSyncServiceInstaller.DisplayName = "Concept Munich Drug Stock Sync Service";
-            this.MunichDrugSyncServiceInstaller.ServiceName = "Concept Munich Drug Stock Sync Service";
-            this.MunichDrugSyncServiceInstaller.AfterUninstall += new System.Configuration.Install.InstallEventHandler(this.MunichDrugSyncServiceInstaller_AfterUninstall);
-            this.MunichDrugSyncServiceInstaller.BeforeUninstall += new System.Configuration.Install.InstallEventHandler(this.MunichDrugSyncServiceInstaller_BeforeUninstall);
+            this.PharmacyDrugSyncServiceInstaller.Description = "Concept Pharmacy Drug Stock Sync Service";
+            this.PharmacyDrugSyncServiceInstaller.DisplayName = "Concept Pharmacy Drug Stock Sync Service";
+            this.PharmacyDrugSyncServiceInstaller.ServiceName = "Concept Pharmacy Drug Stock Sync Service";
+            this.PharmacyDrugSyncServiceInstaller.AfterUninstall += new System.Configuration.Install.InstallEventHandler(this.PharmacyDrugSyncServiceInstaller_AfterUninstall);
+            this.PharmacyDrugSyncServiceInstaller.BeforeUninstall += new System.Configuration.Install.InstallEventHandler(this.PharmacyDrugSyncServiceInstaller_BeforeUninstall);
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.MunichDrugSyncProcessInstaller1,
-            this.MunichDrugSyncServiceInstaller});
+            this.PharmacyDrugSyncProcessInstaller1,
+            this.PharmacyDrugSyncServiceInstaller});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller MunichDrugSyncProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller MunichDrugSyncServiceInstaller;
+        private System.ServiceProcess.ServiceProcessInstaller PharmacyDrugSyncProcessInstaller1;
+        private System.ServiceProcess.ServiceInstaller PharmacyDrugSyncServiceInstaller;
     }
 }

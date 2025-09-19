@@ -1,0 +1,32 @@
+CREATE OR REPLACE PACKAGE HOSPITAL.PHARMACY_DRUG_SYNC_INTEGRATION AS
+  TYPE t_varchar2_tab IS TABLE OF VARCHAR2(1000) INDEX BY PLS_INTEGER;
+  TYPE t_number_tab    IS TABLE OF NUMBER(10,2)  INDEX BY PLS_INTEGER;
+
+  PROCEDURE SAVE_UPDATE_DRUG_STOCK(p_drugcodes IN t_varchar2_tab,p_quantities IN t_number_tab);
+END PHARMACY_DRUG_SYNC_INTEGRATION;
+
+-- package body (procedure implementation)
+CREATE OR REPLACE PACKAGE BODY PHARMACY_DRUG_SYNC_INTEGRATION AS
+
+  PROCEDURE SAVE_UPDATE_DRUG_STOCK(p_drugcodes IN t_varchar2_tab,
+                           p_quantities IN t_number_tab) IS
+  BEGIN
+    IF p_drugcodes.COUNT != p_quantities.COUNT THEN
+      RAISE_APPLICATION_ERROR(-20001, 'Arrays must have the same length');
+    END IF;
+
+    -- simple loop with MERGE for each element (works reliably)
+    FOR i IN 1 .. p_drugcodes.COUNT LOOP
+      MERGE INTO PHARMACY_DRUG_SYNC_STG t
+      USING (SELECT p_drugcodes(i) AS drugcode, p_quantities(i) AS quantity FROM dual) s
+      ON (t.DRUG_CODE = s.drugcode)
+      WHEN MATCHED THEN
+        UPDATE SET t.DRUG_QTY = s.quantity, t.UPDATED_ON = SYSDATE
+      WHEN NOT MATCHED THEN
+        INSERT (DRUG_CODE, DRUG_QTY, CREATED_ON)
+        VALUES (s.drugcode, s.quantity, SYSDATE);
+    END LOOP;
+  END SAVE_UPDATE_DRUG_STOCK;
+
+END PHARMACY_DRUG_SYNC_INTEGRATION;
+/

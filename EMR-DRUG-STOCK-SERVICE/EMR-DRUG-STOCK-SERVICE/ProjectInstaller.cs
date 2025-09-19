@@ -17,18 +17,18 @@ namespace EMR_DRUG_STOCK_SERVICE
             InitializeComponent();
         }
 
-        private void MunichDrugSyncServiceInstaller_AfterUninstall(object sender, InstallEventArgs e)
+        private void PharmacyDrugSyncServiceInstaller_AfterUninstall(object sender, InstallEventArgs e)
         {
 
         }
 
-        private void MunichDrugSyncServiceInstaller_BeforeUninstall(object sender, InstallEventArgs e)
+        private void PharmacyDrugSyncServiceInstaller_BeforeUninstall(object sender, InstallEventArgs e)
         {
-            ServiceController sc = new ServiceController("Concept Munich Drug Stock Sync Service");
+            ServiceController sc = new ServiceController("Concept Pharmacy Drug Stock Sync Service");
             switch (sc.Status)
             {
                 case ServiceControllerStatus.Running:
-                    new ServiceController(MunichDrugSyncServiceInstaller.ServiceName).Stop();
+                    new ServiceController(PharmacyDrugSyncServiceInstaller.ServiceName).Stop();
                     break;
             }
         }
